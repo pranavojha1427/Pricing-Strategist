@@ -1,0 +1,14 @@
+name: Auto-update Menu Prices
+trigger:
+  type: webhook
+  method: POST
+  path: /webhook/update-menu
+
+actions:
+  - type: github
+    action: update_file
+    repository: your-username/your-repo-name
+    branch: main
+    file_path: src/data/menu_data.json
+    content: "{{ trigger.payload }}"
+    commit_message: "Auto-update menu prices"

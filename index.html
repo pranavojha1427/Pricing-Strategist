@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniStrike — Create Your AI Storefront</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="landing-page">
+    <div class="background-3d">
+        <div class="mesh-gradient"></div>
+    </div>
+    
+    <div class="container landing-container">
+        <header>
+            <h1 class="hero-title">Build Your AI Storefront <br> <span class="gradient-text">In Seconds.</span></h1>
+            <p class="hero-subtitle">Provide a competitor's link and watch Zynd AI architect your 3D storefront with optimized prices and AI product photography.</p>
+        </header>
+
+        <div class="generator-card">
+            <div class="input-group-vertical">
+                <div class="field">
+                    <label>What's your business name?</label>
+                    <input type="text" id="business-input" placeholder="e.g. The Vintage Bookshop">
+                </div>
+                <div class="field">
+                    <label>Target Link to Scrape</label>
+                    <input type="text" id="url-input" placeholder="e.g. books.toscrape.com">
+                </div>
+                <button id="generate-btn" class="primary-btn">Generate My Website</button>
+            </div>
+            
+            <div id="loading-zone" class="loading-zone hidden">
+                <div class="loader"></div>
+                <p id="status-text">Zynd AI is initializing...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('generate-btn').addEventListener('click', async () => {
+            const btn = document.getElementById('generate-btn');
+            const businessName = document.getElementById('business-input').value || "OmniStrike Store";
+            const targetUrl = document.getElementById('url-input').value;
+            const loadingZone = document.getElementById('loading-zone');
+            const statusText = document.getElementById('status-text');
+
+            if (!targetUrl) {
+                alert("Please provide a target link!");
+                return;
+            }
+
+            // UI State
+            btn.style.display = 'none';
+            loadingZone.classList.remove('hidden');
+            statusText.textContent = "Zynd AI: Scraping Competitor Data...";
+
+            try {
+                const response = await fetch('http://localhost:5000/api/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ business_name: businessName, target_url: targetUrl })
+                });
+
+                if (!response.ok) throw new Error("Generation failed");
+
+                statusText.textContent = "AI: Generating Product Photography...";
+                
+                // Give a moment for the user to see the progress
+                setTimeout(() => {
+                    statusText.textContent = "Success! Launching your website...";
+                    setTimeout(() => {
+                        window.location.href = '/store.html';
+                    }, 1000);
+                }, 1500);
+
+            } catch (error) {
+                alert("Error: " + error.message);
+                btn.style.display = 'block';
+                loadingZone.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

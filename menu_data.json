@@ -1,0 +1,12 @@
+[
+    {
+        "dish": "Paneer Butter Masala",
+        "new_price": 260,
+        "highlight_special": false
+    },
+    {
+        "dish": "Chicken Biryani",
+        "new_price": 235,
+        "highlight_special": true
+    }
+]

@@ -1,0 +1,75 @@
+{
+    "store_name": "BookShop",
+    "items": [
+        {
+            "product_name": "A Light in the Attic",
+            "original_price": 51,
+            "new_price": 48,
+            "discount_applied": "5% OFF",
+            "image_url": "/assets/images/a_light_in_the_attic.jpg"
+        },
+        {
+            "product_name": "Tipping the Velvet",
+            "original_price": 53,
+            "new_price": 50,
+            "discount_applied": "5% OFF",
+            "image_url": "https://image.pollinations.ai/prompt/Professional%20high-end%20product%20photography%20of%20Tipping%20the%20Velvet%2C%20studio%20lighting%2C%208k%2C%20clean%20background?width=600&height=400&nologo=true&seed=1778421871"
+        },
+        {
+            "product_name": "Soumission",
+            "original_price": 50,
+            "new_price": 47,
+            "discount_applied": "5% OFF",
+            "image_url": "https://image.pollinations.ai/prompt/Professional%20high-end%20product%20photography%20of%20Soumission%2C%20studio%20lighting%2C%208k%2C%20clean%20background?width=600&height=400&nologo=true&seed=1778421892"
+        },
+        {
+            "product_name": "Sharp Objects",
+            "original_price": 47,
+            "new_price": 44,
+            "discount_applied": "5% OFF",
+            "image_url": "https://image.pollinations.ai/prompt/Professional%20high-end%20product%20photography%20of%20Sharp%20Objects%2C%20studio%20lighting%2C%208k%2C%20clean%20background?width=600&height=400&nologo=true&seed=1778421893"
+        },
+        {
+            "product_name": "Sapiens: A Brief History of Humankind",
+            "original_price": 54,
+            "new_price": 51,
+            "discount_applied": "5% OFF",
+            "image_url": "https://image.pollinations.ai/prompt/Professional%20high-end%20product%20photography%20of%20Sapiens%3A%20A%20Brief%20History%20of%20Humankind%2C%20studio%20lighting%2C%208k%2C%20clean%20background?width=600&height=400&nologo=true&seed=1778421894"
+        },
+        {
+            "product_name": "The Requiem Red",
+            "original_price": 22,
+            "new_price": 20,
+            "discount_applied": "5% OFF",
+            "image_url": "https://image.pollinations.ai/prompt/Professional%20high-end%20product%20photography%20of%20The%20Requiem%20Red%2C%20studio%20lighting%2C%208k%2C%20clean%20background?width=600&height=400&nologo=true&seed=1778421896"
+        },
+        {
+            "product_name": "The Dirty Little Secrets of Getting Your Dream Job",
+            "original_price": 33,
+            "new_price": 31,
+            "discount_applied": "5% OFF",
+            "image_url": "https://image.pollinations.ai/prompt/Professional%20high-end%20product%20photography%20of%20The%20Dirty%20Little%20Secrets%20of%20Getting%20Your%20Dream%20Job%2C%20studio%20lighting%2C%208k%2C%20clean%20background?width=600&height=400&nologo=true&seed=1778421897"
+        },
+        {
+            "product_name": "The Coming Woman: A Novel Based on the Life of the Infamous Feminist, Victoria Woodhull",
+            "original_price": 17,
+            "new_price": 16,
+            "discount_applied": "5% OFF",
+            "image_url": "https://image.pollinations.ai/prompt/Professional%20high-end%20product%20photography%20of%20The%20Coming%20Woman%3A%20A%20Novel%20Based%20on%20the%20Life%20of%20the%20Infamous%20Feminist%2C%20Victoria%20Woodhull%2C%20studio%20lighting%2C%208k%2C%20clean%20background?width=600&height=400&nologo=true&seed=1778421899"
+        },
+        {
+            "product_name": "The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics",
+            "original_price": 22,
+            "new_price": 20,
+            "discount_applied": "5% OFF",
+            "image_url": "https://image.pollinations.ai/prompt/Professional%20high-end%20product%20photography%20of%20The%20Boys%20in%20the%20Boat%3A%20Nine%20Americans%20and%20Their%20Epic%20Quest%20for%20Gold%20at%20the%201936%20Berlin%20Olympics%2C%20studio%20lighting%2C%208k%2C%20clean%20background?width=600&height=400&nologo=true&seed=1778421901"
+        },
+        {
+            "product_name": "The Black Maria",
+            "original_price": 52,
+            "new_price": 49,
+            "discount_applied": "5% OFF",
+            "image_url": "https://image.pollinations.ai/prompt/Professional%20high-end%20product%20photography%20of%20The%20Black%20Maria%2C%20studio%20lighting%2C%208k%2C%20clean%20background?width=600&height=400&nologo=true&seed=1778421902"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">My AI Storefront</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body class="store-page">
+    <div class="background-3d">
+        <div class="mesh-gradient"></div>
+    </div>
+    
+    <div class="container">
+        <nav class="store-nav">
+            <a href="/" class="back-link">← Back to Generator</a>
+            <div class="live-badge"><span class="pulse success"></span> Zynd AI Optimized</div>
+        </nav>
+
+        <header class="store-header">
+            <h1 id="store-title">Your Store</h1>
+        </header>
+
+        <main>
+            <div id="product-grid" class="product-grid">
+                <!-- Products injected via script -->
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function loadStore() {
+            const productGrid = document.getElementById('product-grid');
+            const storeTitle = document.getElementById('store-title');
+            const pageTitle = document.getElementById('page-title');
+
+            try {
+                const response = await fetch('/src/data/store_data.json');
+                if (!response.ok) throw new Error("No store data");
+                
+                const data = await response.json();
+                
+                storeTitle.textContent = data.store_name;
+                pageTitle.textContent = data.store_name;
+                
+                productGrid.innerHTML = '';
+                data.items.forEach((item, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.style.animation = `fadeInUp 0.8s ease forwards ${index * 0.1}s`;
+                    
+                    card.innerHTML = `
+                        <img src="${item.image_url}" alt="${item.product_name}" class="product-image">
+                        <h3 class="product-name">${item.product_name}</h3>
+                        <div class="price-container">
+                            <div class="price-block">
+                                <span class="original-price">₹${item.original_price}</span>
+                                <span class="new-price">${item.new_price}</span>
+                            </div>
+                            <div class="discount-badge">${item.discount_applied}</div>
+                        </div>
+                    `;
+                    productGrid.appendChild(card);
+                });
+            } catch (e) {
+                window.location.href = '/'; // Go back if no data
+            }
+        }
+        loadStore();
+    </script>
+</body>
+</html>
